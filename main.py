@@ -7,7 +7,11 @@ kit = pnwkit.QueryKit(st.secrets["apikey"])
 
 st.markdown("<h1 style='text-align: center;'>Nation MMR Tool</h1>", unsafe_allow_html=True)
 
-nationid = st.text_input("Nation ID")
+
+try:
+    nationid = st.text_input("Nation ID")
+except:
+    pass
 
 nationid = int(nationid)
 

@@ -37,19 +37,19 @@ if nationid != "":
     if citycount == 0:
         st.write("Nation not found")
     
-    elif citycount <= 9:
+    elif citycount <= 9 and citycount >= 1:
         mmrtype = 1
         st.write(f"Raiding MMR -> 5/2/1/1")
         mmrTable = pd.DataFrame({"Soldiers": [citycount * 3000 * 5], "Tanks": [citycount * 250 * 2], "Planes": [citycount * 15 * 1], "Ships": [citycount * 5 * 1]})
         st.table(mmrTable)
     
-    elif citycount <= 19:
+    elif citycount <= 19 and citycount >= 10:
         mmrtype = 2
         st.write(f"Farming MMR -> 1/2/5/1")
         mmrTable = pd.DataFrame({"Soldiers": [citycount * 3000 * 1], "Tanks": [citycount * 250 * 2], "Planes": [citycount * 15 * 5], "Ships": [citycount * 5 * 1]})
         st.table(mmrTable)
     
-    elif citycount >= 29:
+    elif citycount >= 20:
         mmrtype = 3
         st.write(f"Farming MMR -> 0/2/5/0")
         mmrTable = pd.DataFrame({"Soldiers": [citycount * 3000 * 0], "Tanks": [citycount * 250 * 2], "Planes": [citycount * 15 * 5], "Ships": [citycount * 5 * 0]})

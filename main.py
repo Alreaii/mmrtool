@@ -19,7 +19,7 @@ if nationid:
     
     "---"
 
-    st.write(f"Nation name: {nationCities.nations[0].nation_name})
+    st.write(f"Nation name: {nationCities.nations[0].nation_name}")
     
     st.write(f"City count: {citycount}")
     
